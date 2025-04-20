@@ -20,8 +20,7 @@ A modern full-stack financial management dashboard inspired by the traditional K
 
 | Frontend       | Backend        | CI/CD           | Deployment |
 |----------------|----------------|------------------|------------|
-| React          | Node.js
-|                | Firebase (Auth + Firestore) | GitHub Actions | Render |
+| React          | Firebase (Auth + Firestore) | GitHub Actions | Render |
 |                | Firebase SDK   | Render Deploy Hook | Docker |
 
 ---
