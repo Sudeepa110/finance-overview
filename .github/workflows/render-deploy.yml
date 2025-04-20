@@ -1,0 +1,18 @@
+name: Deploy to Render (Docker)
+
+on:
+  push:
+    branches:
+      - main  # or your production branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📦 Checkout code
+      uses: actions/checkout@v3
+
+    - name: 🚀 Call Render Deploy Hook
+      run: |
+        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
