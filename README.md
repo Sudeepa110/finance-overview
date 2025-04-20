@@ -8,7 +8,7 @@ A modern full-stack financial management dashboard inspired by the traditional K
 
 - 🔐 User Authentication (Email/Password + Google Sign-in)
 - 📊 Dashboard with Pie, Bar, Line, and Area charts
-- 👥 Client, Loan, EMI, and User Management
+- 👥 Client, Loan, EMI
 - 🧮 Loan EMI Calculator
 - ☁️ Firebase as backend (Auth + Firestore)
 - 🐳 Dockerized for smooth deployment
@@ -22,7 +22,7 @@ A modern full-stack financial management dashboard inspired by the traditional K
 |----------------|----------------|------------------|------------|
 | React       
 | Firebase (Auth + Firestore) | GitHub Actions | Render |
-| Tailwind CSS   | Firebase SDK   | Render Deploy Hook | Docker |
+|    | Firebase SDK   | Render Deploy Hook | Docker |
 
 ---
 
