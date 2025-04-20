@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: your-dockerhub-username/finance-overview:latest
+        tags: sudeepa11/finance-overview:latest
