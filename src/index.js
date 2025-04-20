@@ -11,7 +11,7 @@ import Loans from './pages/Loans';
 import Emi from './pages/Emi';
 import Calculator from './pages/Calculator';
 import Contact from './pages/Contact';
-import Users from './pages/Users';
+// import Users from './pages/Users';
 import reportWebVitals from './reportWebVitals';
 import Login from './auth/Login';
 import Register from './auth/Register';
@@ -48,10 +48,10 @@ const router = createHashRouter([
             path: '/contact',
             Component: Contact,
           },
-          {
-            path: '/users',
-            Component: Users,
-          },
+          // {
+          //   path: '/users',
+          //   Component: Users,
+          // },
         ],
       },
     ],
