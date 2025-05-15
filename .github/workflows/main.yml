@@ -1,0 +1,49 @@
+name: Finance Overview CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 📦 Install root dependencies
+        run: npm install
+
+      - name: 🚨 Lint code
+        run: npm run lint
+
+      - name: 🧪 Run tests
+        run: npm test
+
+      - name: ⚙️ Build frontend
+        run: |
+          cd frontend
+          npm install
+          npm run build
+
+      # Optional: Firebase Deploy (Needs secret config)
+      - name: 🔥 Deploy to Firebase (Optional)
+        if: github.ref == 'refs/heads/main'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.FIREBASE_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_}}"
+          channelId: live
+          projectId: finance-overview-8821a
